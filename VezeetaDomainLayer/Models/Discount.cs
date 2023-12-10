@@ -15,7 +15,7 @@ namespace VezeetaDomainLayer.Models
         public string? CouponCode { get; set; }
         public DiscountTypeEnum Type { get; set; }
         public ICollection<Request> Requests { get; set; } = new List<Request>();
-        public bool IsActive { get; set; }
+        public bool IsDeactivated { get; set; } 
     }
 
 }

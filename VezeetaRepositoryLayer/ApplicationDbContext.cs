@@ -60,13 +60,13 @@ namespace VezeetaRepositoryLayer
             .HasMany(d => d.Appointments)
             .WithOne(a => a.Doctor)
             .HasForeignKey(a => a.DoctorId)
-            .OnDelete(DeleteBehavior.Cascade); // Adjust cascade behavior as needed
+            .OnDelete(DeleteBehavior.Cascade); 
 
             modelBuilder.Entity<Appointment>()
               .HasMany(a => a.Requests)
               .WithOne(r => r.Appointment)
               .HasForeignKey(r => r.AppointmentId)
-              .OnDelete(DeleteBehavior.NoAction);  // Specify the desired action
+              .OnDelete(DeleteBehavior.NoAction);  
 
             modelBuilder.Entity<Request>()
             .HasOne(r => r.TimeSlot)
@@ -74,11 +74,7 @@ namespace VezeetaRepositoryLayer
             .HasForeignKey(r => r.TimeSlotId)
             .OnDelete(DeleteBehavior.Restrict);
 
-            //     modelBuilder.Entity<Appointment>()
-            //.HasOne(a => a.Patient)
-            //.WithMany()
-            //.HasForeignKey(a => a.PatientId)
-            //.OnDelete(DeleteBehavior.SetNull);
+           
 
             modelBuilder.Entity<Request>()
              .HasOne(r => r.Appointment)
@@ -100,11 +96,7 @@ namespace VezeetaRepositoryLayer
 
 
 
-            //modelBuilder.Entity<Discount>()
-            //    .HasMany(discount => discount.TimeSlots)
-            //    .WithOne(timeSlot => timeSlot.Discount)
-            //    .HasForeignKey(timeSlot => timeSlot.DiscountId)
-            //    .OnDelete(DeleteBehavior.Cascade);
+           
         }
     }
     

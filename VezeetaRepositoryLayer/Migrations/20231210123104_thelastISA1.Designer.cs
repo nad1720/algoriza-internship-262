@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VezeetaRepositoryLayer;
 
@@ -11,9 +12,10 @@ using VezeetaRepositoryLayer;
 namespace VezeetaRepositoryLayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231210123104_thelastISA1")]
+    partial class thelastISA1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -324,7 +326,7 @@ namespace VezeetaRepositoryLayer.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4207a37b-52e6-4777-80c0-0181f72d4fdd",
+                            ConcurrencyStamp = "af24c0d5-35ef-4512-b7d0-2ddfaba21912",
                             Email = "lolotamaga.com@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
@@ -575,6 +577,9 @@ namespace VezeetaRepositoryLayer.Migrations
 
                     b.Property<int?>("DoctorId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("bit");
 
                     b.Property<int?>("PatientId")
                         .HasColumnType("int");

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VezeetaDomainLayer.DTOs;
+using VezeetaDomainLayer.Enums;
 using VezeetaServiceLayer.Implementation;
 using VezeetaServiceLayer.Interfaces;
 
@@ -28,20 +29,21 @@ namespace VeZeetaWebAPI.Controllers
                 return BadRequest("Login failed. Please check your credentials.");
             }
         }
-        [HttpGet("{doctorId}/requests")]
-        public IActionResult GetAllRequests(int doctorId)
+        [HttpGet("requests/{doctorId}")]
+        public IActionResult GetAllRequests(int doctorId, [FromQuery] DayOfWeekEnum searchByDate, int page, int pageSize)
         {
             try
             {
-                var requests = _doctorService.GetAllRequests(doctorId);
+                var requests = _doctorService.GetAllRequests(doctorId, page, pageSize, searchByDate);
                 return Ok(requests);
             }
             catch (Exception ex)
             {
-                // Log the exception
+                
                 return StatusCode(500, "An error occurred while processing your request.");
             }
         }
+
 
         [HttpPost("confirm-checkup/{requestId}")]
         public IActionResult ConfirmCheckUp(int requestId)
@@ -58,9 +60,9 @@ namespace VeZeetaWebAPI.Controllers
             }
         }
 
-        // Inside your DoctorController class
+        
         [HttpPost("add-appointment")]
-        public IActionResult AddDocAppointment(int doctorId, [FromBody] DocAppointmentDTO appointmentDTO)
+        public IActionResult AddDocAppointment(int doctorId, [FromForm] DocAppointmentDTO appointmentDTO)
         {
             if (appointmentDTO == null)
             {
@@ -80,7 +82,7 @@ namespace VeZeetaWebAPI.Controllers
         }
 
         [HttpPut("update-appointment/{doctorId}/{appointmentId}")]
-        public IActionResult UpdateAppointment(int doctorId, int appointmentId, [FromBody] DocAppointmentDTO updatedAppointmentDto)
+        public IActionResult UpdateAppointment(int doctorId, int appointmentId, [FromForm] DocAppointmentDTO updatedAppointmentDto)
         {
             var success = _doctorService.UpdateAppointment(doctorId, appointmentId, updatedAppointmentDto);
 
@@ -96,7 +98,7 @@ namespace VeZeetaWebAPI.Controllers
         [HttpDelete("{appointmentId}/times/{timeSlotId}")]
         public IActionResult DeleteTimeSlot(int doctorId, int appointmentId, int timeSlotId)
         {
-            // You might want to add authorization logic here to ensure the doctor can perform this action
+     
 
             var isDeleted = _doctorService.DeleteTimeSlot(appointmentId, timeSlotId);
 

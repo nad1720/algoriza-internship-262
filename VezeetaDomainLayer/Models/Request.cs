@@ -6,7 +6,7 @@ namespace VezeetaDomainLayer.Models
     public class Request
     {
         public int Id { get; set; }
-        public DayOfWeekEnum Day { get; set; }
+        
        
         public StatusEnum Status { get; set; }
 
@@ -27,7 +27,7 @@ namespace VezeetaDomainLayer.Models
         public Appointment? Appointment { get; set; }
         public int? TimeSlotId { get; set; }
         
-        public bool IsConfirmed { get; set; }
+       
     }
    
    

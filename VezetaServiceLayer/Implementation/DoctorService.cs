@@ -35,51 +35,52 @@
 
                 public bool ConfirmCheckUp(int requestId)
                     {
-                        try
-                        {
+                        
                             var request = _context.Requests.Find(requestId);
 
-                            if (request == null || request.IsConfirmed)
+                            if (request == null || request.Status==StatusEnum.Completed)
                             {
                    
                                 return false;
-                            }
+                            } 
 
-               
-                            request.IsConfirmed = true;
-
+                            request.Status = StatusEnum.Completed;
                             _context.SaveChanges();
 
-                            return true; // Confirmation successful
-                        }
-                        catch (Exception ex)
-                        {
-                            // Log or handle the exception as needed
-                            return false; // Confirmation failed due to an error
-                        }
+                            return true; 
+                        
+                       
                     }
 
-                public IEnumerable<DoctorRequestDTO> GetAllRequests(int doctorId)
-                    {
-                        var requests = _context.Requests
-                            .Where(r => r.DoctorId == doctorId)
-                            .Include(r => r.Patient) 
-                            .ToList();
-                        using var datastream=new MemoryStream();
-            
-                        return requests.Select(r => new DoctorRequestDTO
-                        {
-                            PatientName = r.Patient.PatientName,
-                            Image = r.Patient.Image,
-                            Age = Calculations.CalculateAge(r.Patient.DateOfBirth), 
-                            Gender = r.Patient.Gender.ToString(),
-                            Phone = r.Patient.Phone,
-                            Email = r.Patient.Email
-                        });
+        public IEnumerable<DoctorRequestDTO> GetAllRequests(int doctorId, int page, int pageSize, DayOfWeekEnum searchByDate)
+        {
+            var requests = _context.Requests
+                .Where(r => r.DoctorId == doctorId)
+                .Include(r => r.Patient)
+                .Include(r => r.TimeSlot.Appointment)
+                .ToList();
 
-                    }
+            using var datastream = new MemoryStream();
 
-                public bool AddDocAppointment(int doctorId, DocAppointmentDTO appointmentDTO)
+            return requests
+                .Where(r => r.TimeSlot.Appointment.Day == searchByDate)
+                .Select(r => new DoctorRequestDTO
+                {
+                    PatientName = r.Patient.PatientName,
+                    Image = r.Patient.Image,
+                    Age = Calculations.CalculateAge(r.Patient.DateOfBirth),
+                    Gender = r.Patient.Gender.ToString(),
+                    Phone = r.Patient.Phone,
+                    Email = r.Patient.Email
+                })
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize);
+        }
+
+
+
+
+        public bool AddDocAppointment(int doctorId, DocAppointmentDTO appointmentDTO)
                     {
                         var doctor = _context.Doctors.Include(d => d.Appointments).FirstOrDefault(d => d.Id == doctorId);
 

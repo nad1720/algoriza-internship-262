@@ -62,14 +62,14 @@ namespace VezeetaAPI.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception or handle it appropriately
+               
                 return StatusCode(500, "Internal server error");
             }
 
         }
         //[Authorize(Roles = "Patient")]
         [HttpPost("book-appointment/{patientId}")]
-        public IActionResult BookAppointment(int patientId, [FromBody] BookingDTO bookingRequestDto)
+        public IActionResult BookAppointment(int patientId, [FromForm] BookingDTO bookingRequestDto)
         {
             // Validate the patientId and other inputs
             if (bookingRequestDto == null || string.IsNullOrWhiteSpace(bookingRequestDto.DiscountCodeCoupon) || bookingRequestDto.TimeId <= 0)
@@ -87,8 +87,6 @@ namespace VezeetaAPI.Controllers
 
             return BadRequest("Failed to book the appointment");
         }
-
-
 
         [HttpPost("cancel-booking/{bookingId}")]
         //[Authorize(Roles = "Patient")]

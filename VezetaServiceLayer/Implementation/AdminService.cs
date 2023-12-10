@@ -178,7 +178,7 @@ namespace VezeetaServiceLayer.Implementation
                     return false;
                 }
 
-                existingDiscount.IsActive = false; 
+                existingDiscount.IsDeactivated = true; 
                 _context.SaveChanges();
 
                 return true; 
@@ -401,7 +401,7 @@ namespace VezeetaServiceLayer.Implementation
                      Image = r.Doctor.Image,
                      DoctorName = r.Doctor.FullName,
                      Specialize = r.Doctor.Specialize,
-                     Day = r.Day.ToString(),
+                     Day = r.Appointment.Day.ToString(),
                      
                      Price = r.Doctor.Price,
                      DiscountCode = r.Discount.CouponCode,

@@ -52,15 +52,16 @@
 
                     if (result.Succeeded)
                     {
-                        var patient = new Patient
-                        {
+                    var patient = new Patient
+                    {
+                            AdminId = 1,
                             Email = identityUser.Email,
                             PatientName = registerPatientDto.FullName,
                             Phone = registerPatientDto.Phone,
                             Image=dataStream.ToArray(),
                             Gender=registerPatientDto.Gender,
                             DateOfBirth=registerPatientDto.DateOfBirth,
-                        };
+                    };
                         _context.Patients.Add(patient);
                         await _context.SaveChangesAsync();
                     }
