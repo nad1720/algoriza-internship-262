@@ -1,0 +1,17 @@
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\bin\Debug\net6.0\VezeetaRepositoryLayer.deps.json
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\bin\Debug\net6.0\VezeetaRepositoryLayer.runtimeconfig.json
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\bin\Debug\net6.0\VezeetaRepositoryLayer.dll
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\bin\Debug\net6.0\VezeetaRepositoryLayer.pdb
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\bin\Debug\net6.0\VezeetaDomainLayer.dll
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\bin\Debug\net6.0\VezeetaDomainLayer.pdb
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.csproj.AssemblyReference.cache
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.AssemblyInfoInputs.cache
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.AssemblyInfo.cs
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.csproj.CoreCompileInputs.cache
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.csproj.CopyComplete
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.dll
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\refint\VezeetaRepositoryLayer.dll
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.pdb
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\VezeetaRepositoryLayer.genruntimeconfig.cache
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaRepositoryLayer\obj\Debug\net6.0\ref\VezeetaRepositoryLayer.dll

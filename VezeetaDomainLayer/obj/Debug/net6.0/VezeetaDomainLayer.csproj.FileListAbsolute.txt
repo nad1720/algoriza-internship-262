@@ -1,0 +1,14 @@
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\bin\Debug\net6.0\VezeetaDomainLayer.deps.json
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\bin\Debug\net6.0\VezeetaDomainLayer.runtimeconfig.json
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\bin\Debug\net6.0\VezeetaDomainLayer.dll
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\bin\Debug\net6.0\VezeetaDomainLayer.pdb
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\VezeetaDomainLayer.csproj.AssemblyReference.cache
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\VezeetaDomainLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\VezeetaDomainLayer.AssemblyInfoInputs.cache
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\VezeetaDomainLayer.AssemblyInfo.cs
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\VezeetaDomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\VezeetaDomainLayer.dll
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\refint\VezeetaDomainLayer.dll
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\VezeetaDomainLayer.pdb
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\VezeetaDomainLayer.genruntimeconfig.cache
+C:\Users\Na Da\Source\Repos\VeZeetaWebAPI\VezeetaDomainLayer\obj\Debug\net6.0\ref\VezeetaDomainLayer.dll
